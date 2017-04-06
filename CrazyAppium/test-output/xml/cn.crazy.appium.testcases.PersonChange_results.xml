@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="127.0.0.1:62001"
+           tests="1"
+           failures="1"
+           errors="0"
+           skipped="0"
+           time="102.080">
+  <properties />
+            <testcase name="modify" time="102.080" classname="cn.crazy.appium.testcases.PersonChange">
+                <failure type="java.lang.AssertionError"
+                  message="expected [true] but found [false]"
+              >
+<![CDATA[java.lang.AssertionError: expected [true] but found [false]
+  org.testng.Assert.fail(Assert.java:94)
+  org.testng.Assert.failNotEquals(Assert.java:513)
+  org.testng.Assert.assertEqualsImpl(Assert.java:135)
+  org.testng.Assert.assertEquals(Assert.java:116)
+  org.testng.Assert.assertEquals(Assert.java:305)
+  org.testng.Assert.assertEquals(Assert.java:315)
+  cn.crazy.appium.page.PersionChange.modify(PersionChange.java:111)
+  cn.crazy.appium.testcases.PersonChange.modify(PersonChange.java:38)
+  sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+  sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+  sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+  java.lang.reflect.Method.invoke(Method.java:483)
+  org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+  org.testng.internal.Invoker.invokeMethod(Invoker.java:643)
+  org.testng.internal.Invoker.invokeTestMethod(Invoker.java:820)
+  org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1128)
+  org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+  org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+  org.testng.TestRunner.privateRun(TestRunner.java:782)
+  org.testng.TestRunner.run(TestRunner.java:632)
+  org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
+  org.testng.SuiteRunner.access$000(SuiteRunner.java:39)
+  org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:400)
+  org.testng.internal.thread.ThreadUtil$2.call(ThreadUtil.java:64)
+  java.util.concurrent.FutureTask.run(FutureTask.java:266)
+  java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+  java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  java.lang.Thread.run(Thread.java:745)
+]]>
+      </failure>
+
+          </testcase>
+  
+  
+  
+</testsuite>

@@ -1,0 +1,601 @@
+[36minfo[39m: Welcome to Appium v1.4.16 (REV ae6877eff263066b26328d457bd285c0cc62430d)
+[36minfo[39m: Appium REST http interface listener started on 0.0.0.0:4490
+[36minfo[39m: [debug] Non-default server args: {"udid":"127.0.0.1:62001","port":4490,"bootstrapPort":2233}
+[36minfo[39m: Console LogLevel: debug
+[36minfo[39m: [37m-->[39m [37mPOST[39m [37m/wd/hub/session[39m [90m{"desiredCapabilities":{"appPackage":"com.yjd.app","appActivity":"com.yjd.app.activity.PageLoading","noSign":"True","newCommandTimeout":"600","unicodeKeyboard":"True","udid":"127.0.0.1:62001","platformName":"Android","deviceName":"devicename","resetKeyboard":"True"}}[39m
+[36minfo[39m: Client User-Agent string: Apache-HttpClient/4.5.2 (Java/1.8.0_111)
+[33mwarn[39m: Converting cap noSign from string to boolean. This might cause unexpected behavior.
+[33mwarn[39m: Converting cap unicodeKeyboard from string to boolean. This might cause unexpected behavior.
+[33mwarn[39m: Converting cap resetKeyboard from string to boolean. This might cause unexpected behavior.
+[36minfo[39m: [debug] Didn't get app but did get Android package, will attempt to launch it on the device
+[36minfo[39m: [debug] Creating new appium session a732d0d3-7326-45a0-9565-774739b18162
+[36minfo[39m: Starting android appium
+[36minfo[39m: [debug] Getting Java version
+[36minfo[39m: Java version is: 1.8.0_111
+[36minfo[39m: [debug] Checking whether adb is present
+[36minfo[39m: [debug] Using adb from D:\sdk\platform-tools\adb.exe
+[33mwarn[39m: No app capability, can't parse package/activity
+[36minfo[39m: [debug] Using fast reset? true
+[36minfo[39m: [debug] Preparing device for session
+[36minfo[39m: [debug] Not checking whether app is present since we are assuming it's already on the device
+[36minfo[39m: Retrieving device
+[36minfo[39m: [debug] Trying to find a connected android device
+[36minfo[39m: [debug] Getting connected devices...
+[36minfo[39m: [debug] executing cmd: D:\sdk\platform-tools\adb.exe devices
+[36minfo[39m: [debug] 2 device(s) connected
+[36minfo[39m: Found device 127.0.0.1:62001
+[36minfo[39m: [debug] Setting device id to 127.0.0.1:62001
+[36minfo[39m: [debug] Waiting for device to be ready and to respond to shell commands (timeout = 5)
+[36minfo[39m: [debug] executing cmd: D:\sdk\platform-tools\adb.exe -s 127.0.0.1:62001 wait-for-device
+[36minfo[39m: [debug] executing cmd: D:\sdk\platform-tools\adb.exe -s 127.0.0.1:62001 shell "echo 'ready'"
+[36minfo[39m: [debug] Starting logcat capture
+[36minfo[39m: [debug] Getting device API level
+[36minfo[39m: [debug] executing cmd: D:\sdk\platform-tools\adb.exe -s 127.0.0.1:62001 shell "getprop ro.build.version.sdk"
+[36minfo[39m: [debug] Device is at API Level 19
+[36minfo[39m: Device API level is: 19
+[36minfo[39m: [debug] Extracting strings for language: default
+[36minfo[39m: [debug] Apk doesn't exist locally
+[36minfo[39m: [debug] Could not get strings, but it looks like we had an old strings file anyway, so ignoring
+[36minfo[39m: [debug] executing cmd: D:\sdk\platform-tools\adb.exe -s 127.0.0.1:62001 shell "rm -rf /data/local/tmp/strings.json"
+[36minfo[39m: [debug] Not uninstalling app since server not started with --full-reset
+[36minfo[39m: [debug] Skipping install since we launched with a package instead of an app path
+[36minfo[39m: [debug] Forwarding system:2233 to device:4724
+[36minfo[39m: [debug] executing cmd: D:\sdk\platform-tools\adb.exe -s 127.0.0.1:62001 forward tcp:2233 tcp:4724
+[36minfo[39m: [debug] Pushing appium bootstrap to device...
+[36minfo[39m: [debug] executing cmd: D:\sdk\platform-tools\adb.exe -s 127.0.0.1:62001 push "C:\\Program Files (x86)\\Appium\\node_modules\\appium\\build\\android_bootstrap\\AppiumBootstrap.jar" /data/local/tmp/
+[36minfo[39m: [debug] Enabling Unicode keyboard support
+[36minfo[39m: [debug] Pushing unicode ime to device...
+[36minfo[39m: [debug] executing cmd: D:\sdk\platform-tools\adb.exe -s 127.0.0.1:62001 install "C:\Program Files (x86)\Appium\node_modules\appium\build\unicode_ime_apk\UnicodeIME-debug.apk"
+[36minfo[39m: [debug] executing cmd: D:\sdk\platform-tools\adb.exe -s 127.0.0.1:62001 shell "settings get secure default_input_method"
+[36minfo[39m: [debug] Unsetting IME 'io.appium.android.ime/.UnicodeIME'
+[36minfo[39m: [debug] Setting IME to 'io.appium.android.ime/.UnicodeIME'
+[36minfo[39m: [debug] executing cmd: D:\sdk\platform-tools\adb.exe -s 127.0.0.1:62001 shell "ime enable io.appium.android.ime/.UnicodeIME"
+[36minfo[39m: [debug] executing cmd: D:\sdk\platform-tools\adb.exe -s 127.0.0.1:62001 shell "ime set io.appium.android.ime/.UnicodeIME"
+[36minfo[39m: [debug] Pushing settings apk to device...
+[36minfo[39m: [debug] executing cmd: D:\sdk\platform-tools\adb.exe -s 127.0.0.1:62001 install "C:\Program Files (x86)\Appium\node_modules\appium\build\settings_apk\settings_apk-debug.apk"
+[36minfo[39m: [debug] Pushing unlock helper app to device...
+[36minfo[39m: [debug] executing cmd: D:\sdk\platform-tools\adb.exe -s 127.0.0.1:62001 install "C:\Program Files (x86)\Appium\node_modules\appium\build\unlock_apk\unlock_apk-debug.apk"
+[36minfo[39m: Starting App
+[36minfo[39m: [debug] Attempting to kill all 'uiautomator' processes
+[36minfo[39m: [debug] Getting all processes with 'uiautomator'
+[36minfo[39m: [debug] executing cmd: D:\sdk\platform-tools\adb.exe -s 127.0.0.1:62001 shell "ps 'uiautomator'"
+[36minfo[39m: [debug] No matching processes found
+[36minfo[39m: [debug] Running bootstrap
+[36minfo[39m: [debug] spawning: D:\sdk\platform-tools\adb.exe -s 127.0.0.1:62001 shell uiautomator runtest AppiumBootstrap.jar -c io.appium.android.bootstrap.Bootstrap -e pkg com.yjd.app -e disableAndroidWatchers false
+[36minfo[39m: [debug] [90m[UIAUTOMATOR STDOUT] INSTRUMENTATION_STATUS: numtests=1[39m
+[36minfo[39m: [debug] [90m[UIAUTOMATOR STDOUT] INSTRUMENTATION_STATUS: stream=[39m
+[36minfo[39m: [debug] [90m[UIAUTOMATOR STDOUT] io.appium.android.bootstrap.Bootstrap:[39m
+[36minfo[39m: [debug] [90m[UIAUTOMATOR STDOUT] INSTRUMENTATION_STATUS: id=UiAutomatorTestRunner[39m
+[36minfo[39m: [debug] [90m[UIAUTOMATOR STDOUT] INSTRUMENTATION_STATUS: test=testRunServer[39m
+[36minfo[39m: [debug] [90m[UIAUTOMATOR STDOUT] INSTRUMENTATION_STATUS: class=io.appium.android.bootstrap.Bootstrap[39m
+[36minfo[39m: [debug] [90m[UIAUTOMATOR STDOUT] INSTRUMENTATION_STATUS: current=1[39m
+[36minfo[39m: [debug] [90m[UIAUTOMATOR STDOUT] INSTRUMENTATION_STATUS_CODE: 1[39m
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Socket opened on port 4724
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Appium Socket Server Ready
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Loading json...
+[36minfo[39m: [debug] Waking up device if it's not alive
+[36minfo[39m: [debug] Pushing command to appium work queue: ["wake",{}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Registered crash watchers.
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Client connected
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"wake","params":{}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: wake
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"value":true,"status":0}
+[36minfo[39m: [debug] executing cmd: D:\sdk\platform-tools\adb.exe -s 127.0.0.1:62001 shell "dumpsys window"
+[36minfo[39m: [debug] Screen already unlocked, continuing.
+[36minfo[39m: [debug] Pushing command to appium work queue: ["getDataDir",{}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"getDataDir","params":{}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: getDataDir
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"value":"\/data","status":0}
+[36minfo[39m: [debug] dataDir set to: /data
+[36minfo[39m: [debug] Pushing command to appium work queue: ["compressedLayoutHierarchy",{"compressLayout":false}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"compressedLayoutHierarchy","params":{"compressLayout":false}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: compressedLayoutHierarchy
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"value":false,"status":0}
+[36minfo[39m: [debug] Getting device API level
+[36minfo[39m: [debug] executing cmd: D:\sdk\platform-tools\adb.exe -s 127.0.0.1:62001 shell "getprop ro.build.version.sdk"
+[36minfo[39m: [debug] Device is at API Level 19
+[36minfo[39m: [debug] executing cmd: D:\sdk\platform-tools\adb.exe -s 127.0.0.1:62001 shell "am start -S -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -f 0x10200000 -n com.yjd.app/com.yjd.app.activity.PageLoading"
+[36minfo[39m: [debug] Waiting for pkg "com.yjd.app" and activity "com.yjd.app.activity.PageLoading" to be focused
+[36minfo[39m: [debug] Getting focused package and activity
+[36minfo[39m: [debug] executing cmd: D:\sdk\platform-tools\adb.exe -s 127.0.0.1:62001 shell "dumpsys window windows"
+[36minfo[39m: [debug] executing cmd: D:\sdk\platform-tools\adb.exe -s 127.0.0.1:62001 shell "getprop ro.build.version.release"
+[36minfo[39m: [debug] Device is at release version 4.4.2
+[36minfo[39m: [debug] Device launched! Ready for commands
+[36minfo[39m: [debug] Setting command timeout to 600 secs
+[36minfo[39m: [debug] Appium session started with sessionId a732d0d3-7326-45a0-9565-774739b18162
+[36minfo[39m: [37m<-- POST /wd/hub/session [39m[36m303[39m[90m 109929.750 ms - 74[39m [90m[39m
+[36minfo[39m: [37m-->[39m [37mGET[39m [37m/wd/hub/session/a732d0d3-7326-45a0-9565-774739b18162[39m [90m{}[39m
+[36minfo[39m: [debug] Responding to client with success: {"status":0,"value":{"platform":"LINUX","browserName":"Android","platformVersion":"4.4.2","webStorageEnabled":false,"takesScreenshot":true,"javascriptEnabled":true,"databaseEnabled":false,"networkConnectionEnabled":true,"locationContextEnabled":false,"warnings":{},"desired":{"appPackage":"com.yjd.app","appActivity":"com.yjd.app.activity.PageLoading","noSign":true,"newCommandTimeout":"600","unicodeKeyboard":true,"udid":"127.0.0.1:62001","platformName":"Android","deviceName":"devicename","resetKeyboard":true},"appPackage":"com.yjd.app","appActivity":"com.yjd.app.activity.PageLoading","noSign":true,"newCommandTimeout":"600","unicodeKeyboard":true,"udid":"127.0.0.1:62001","platformName":"Android","deviceName":"127.0.0.1:62001","resetKeyboard":true},"sessionId":"a732d0d3-7326-45a0-9565-774739b18162"}
+[36minfo[39m: [37m<-- GET /wd/hub/session/a732d0d3-7326-45a0-9565-774739b18162 [39m[32m200[39m[90m 4.347 ms - 806[39m [90m{"status":0,"value":{"platform":"LINUX","browserName":"Android","platformVersion":"4.4.2","webStorageEnabled":false,"takesScreenshot":true,"javascriptEnabled":true,"databaseEnabled":false,"networkConnectionEnabled":true,"locationContextEnabled":false,"warnings":{},"desired":{"appPackage":"com.yjd.app","appActivity":"com.yjd.app.activity.PageLoading","noSign":true,"newCommandTimeout":"600","unicodeKeyboard":true,"udid":"127.0.0.1:62001","platformName":"Android","deviceName":"devicename","resetKeyboard":true},"appPackage":"com.yjd.app","appActivity":"com.yjd.app.activity.PageLoading","noSign":true,"newCommandTimeout":"600","unicodeKeyboard":true,"udid":"127.0.0.1:62001","platformName":"Android","deviceName":"127.0.0.1:62001","resetKeyboard":true},"sessionId":"a732d0d3-7326-45a0-9565-774739b18162"}[39m
+[36minfo[39m: [37m-->[39m [37mPOST[39m [37m/wd/hub/session/a732d0d3-7326-45a0-9565-774739b18162/timeouts[39m [90m{"type":"implicit","ms":10000}[39m
+[36minfo[39m: [debug] Set Android implicit wait to 10000ms
+[36minfo[39m: [debug] Responding to client with success: {"status":0,"value":null,"sessionId":"a732d0d3-7326-45a0-9565-774739b18162"}
+[36minfo[39m: [37m<-- POST /wd/hub/session/a732d0d3-7326-45a0-9565-774739b18162/timeouts [39m[32m200[39m[90m 3.277 ms - 76[39m [90m{"status":0,"value":null,"sessionId":"a732d0d3-7326-45a0-9565-774739b18162"}[39m
+[36minfo[39m: [37m-->[39m [37mGET[39m [37m/wd/hub/session/a732d0d3-7326-45a0-9565-774739b18162/appium/device/current_activity[39m [90m{}[39m
+[36minfo[39m: [debug] Getting focused package and activity
+[36minfo[39m: [debug] executing cmd: D:\sdk\platform-tools\adb.exe -s 127.0.0.1:62001 shell "dumpsys window windows"
+[36minfo[39m: [debug] Responding to client with success: {"status":0,"value":".activity.PageLoading","sessionId":"a732d0d3-7326-45a0-9565-774739b18162"}
+[36minfo[39m: [37m<-- GET /wd/hub/session/a732d0d3-7326-45a0-9565-774739b18162/appium/device/current_activity [39m[32m200[39m[90m 488.944 ms - 95[39m [90m{"status":0,"value":".activity.PageLoading","sessionId":"a732d0d3-7326-45a0-9565-774739b18162"}[39m
+[36minfo[39m: [37m-->[39m [37mGET[39m [37m/wd/hub/session/a732d0d3-7326-45a0-9565-774739b18162/source[39m [90m{}[39m
+[36minfo[39m: [debug] Pushing command to appium work queue: ["source",{}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"source","params":{}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: source
+[36minfo[39m: [debug] [90m[UIAUTOMATOR STDOUT] [APPIUM-UIAUTO] [debug] Returning result: {"value":"<?xml version=\"1.0\" encoding=\"UTF-8\"?><hierarchy rotation=\"0\"><android.widget.FrameLayout index=\"0\" text=\"\" class=\"android.widget.FrameLayout\" package=\"com.vphone.launcher\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[0,0][480,800]\" resource-id=\"\" instance=\"0\"><android.widget.LinearLayout index=\"0\" text=\"\" class=\"android.widget.LinearLayout\" package=\"com.vphone.launcher\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[0,0][480,800]\" resource-id=\"\" instance=\"0\"><android.widget.FrameLayout index=\"0\" text=\"\" class=\"android.widget.FrameLayout\" package=\"com.vphone.launcher\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[0,0][480,800]\" resource-id=\"android:id\/content\" instance=\"1\"><android.widget.FrameLayout index=\"0\" text=\"\" class=\"android.widget.FrameLayout\" package=\"com.vphone.launcher\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[0,0][480,800]\" resource-id=\"com.vphone.launcher:id\/launcher\" instance=\"2\"><android.widget.FrameLayout index=\"0\" text=\"\" class=\"android.widget.FrameLayout\" package=\"com.vphone.launcher\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"[39m
+[36minfo[39m: [debug] [90m[UIAUTOMATOR STDOUT] false\" selected=\"false\" bounds=\"[0,0][480,800]\" resource-id=\"com.vphone.launcher:id\/drag_layer\" instance=\"3\"><android.view.View index=\"0\" text=\"\" class=\"android.view.View\" package=\"com.vphone.launcher\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"true\" password=\"false\" selected=\"false\" bounds=\"[0,0][480,800]\" resource-id=\"com.vphone.launcher:id\/workspace\" instance=\"0\"><android.view.View index=\"0\" text=\"\" class=\"android.view.View\" package=\"com.vphone.launcher\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"true\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"true\" password=\"false\" selected=\"false\" bounds=\"[4,105][476,665]\" resource-id=\"\" instance=\"1\"><android.view.View index=\"0\" text=\"\" class=\"android.view.View\" package=\"com.vphone.launcher\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[5,105][477,665]\" resource-id=\"\" instance=\"2\"><android.widget.TextView index=\"0\" text=\"知乎\" class=\"android.widget.TextView\" package=\"com.vphone.launcher\" content-desc=\"知乎\" checkable=\"false\" checked=\"false\" clickable=\"true\" enabled=\"true\" focusable=\"true\" focused=\"false\" scrollable=\"false\" long-clickable=\"true\" password=\"false\" selected=\"false\" bounds=\"[5,105][99,245]\" resource-id=\"\" instance=\"0\"\/><android.widget.TextView index=\"1\" text=\"医界贷\" class=\"android.widget.TextView\" package=\"com.vphone.launcher\" content-desc=\"医界贷\" checkable=\"false\" checked=\"false\" clickable=\"true\" enabled=\"true\" focusable=\"true\" focused=\"false\" scrollable=\"false\" long-clickable=\"true\" password=\"false\" selected=\"false\" bounds=\"[99,105][193,245]\" res[39m
+[36minfo[39m: [debug] [90m[UIAUTOMATOR STDOUT] ource-id=\"\" instance=\"1\"\/><android.widget.FrameLayout index=\"2\" text=\"\" class=\"android.widget.FrameLayout\" package=\"com.vphone.launcher\" content-desc=\"文件夹：Google\" checkable=\"false\" checked=\"false\" clickable=\"true\" enabled=\"true\" focusable=\"true\" focused=\"false\" scrollable=\"false\" long-clickable=\"true\" password=\"false\" selected=\"false\" bounds=\"[193,105][287,245]\" resource-id=\"\" instance=\"4\"><android.widget.TextView index=\"0\" text=\"Google\" class=\"android.widget.TextView\" package=\"com.vphone.launcher\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[196,181][284,245]\" resource-id=\"com.vphone.launcher:id\/folder_icon_name\" instance=\"2\"\/><android.widget.ImageView index=\"1\" text=\"\" class=\"android.widget.ImageView\" package=\"com.vphone.launcher\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[209,121][271,183]\" resource-id=\"com.vphone.launcher:id\/preview_background\" instance=\"0\"\/><\/android.widget.FrameLayout><android.widget.TextView index=\"3\" text=\"相机\" class=\"android.widget.TextView\" package=\"com.vphone.launcher\" content-desc=\"相机\" checkable=\"false\" checked=\"false\" clickable=\"true\" enabled=\"true\" focusable=\"true\" focused=\"false\" scrollable=\"false\" long-clickable=\"true\" password=\"false\" selected=\"false\" bounds=\"[287,105][381,245]\" resource-id=\"\" instance=\"3\"\/><android.widget.TextView index=\"4\" text=\"夜神帮助\" class=\"android.widget.TextView\" package=\"com.vphone.launcher\" content-desc=\"夜神帮助\" checkable=\"false\" checked=\"false\" clickable=\"true\" enabled=\"true\" focusable=\"true\" focused=\"false\" scrollable=\"false\" long-clickable[39m
+[36minfo[39m: [debug] [90m[UIAUTOMATOR STDOUT] =\"true\" password=\"false\" selected=\"false\" bounds=\"[381,105][475,245]\" resource-id=\"\" instance=\"4\"\/><android.widget.TextView index=\"5\" text=\"蓝灯\" class=\"android.widget.TextView\" package=\"com.vphone.launcher\" content-desc=\"蓝灯\" checkable=\"false\" checked=\"false\" clickable=\"true\" enabled=\"true\" focusable=\"true\" focused=\"false\" scrollable=\"false\" long-clickable=\"true\" password=\"false\" selected=\"false\" bounds=\"[5,245][99,385]\" resource-id=\"\" instance=\"5\"\/><android.widget.TextView index=\"6\" text=\"脉脉\" class=\"android.widget.TextView\" package=\"com.vphone.launcher\" content-desc=\"脉脉\" checkable=\"false\" checked=\"false\" clickable=\"true\" enabled=\"true\" focusable=\"true\" focused=\"false\" scrollable=\"false\" long-clickable=\"true\" password=\"false\" selected=\"false\" bounds=\"[99,245][193,385]\" resource-id=\"\" instance=\"6\"\/><android.widget.TextView index=\"7\" text=\"    Appium Settings\" class=\"android.widget.TextView\" package=\"com.vphone.launcher\" content-desc=\"Appium Settings\" checkable=\"false\" checked=\"false\" clickable=\"true\" enabled=\"true\" focusable=\"true\" focused=\"false\" scrollable=\"false\" long-clickable=\"true\" password=\"false\" selected=\"false\" bounds=\"[193,245][287,385]\" resource-id=\"\" instance=\"7\"\/><android.widget.TextView index=\"8\" text=\"Unlock\" class=\"android.widget.TextView\" package=\"com.vphone.launcher\" content-desc=\"Unlock\" checkable=\"false\" checked=\"false\" clickable=\"true\" enabled=\"true\" focusable=\"true\" focused=\"false\" scrollable=\"false\" long-clickable=\"true\" password=\"false\" selected=\"false\" bounds=\"[287,245][381,385]\" resource-id=\"\" instance=\"8\"\/><android.widget.TextView index=\"9\" text=\"浏览器\" class=\"android.widget.TextView\" package=\"com.vphone.launcher\" content-desc=\"浏览器\" checkable=\"false\" checked=\"false\" clickable=\"true\" enabled=\"true\" focusable=\"true\" focused=\"false\" scrollable=\"false\" long-clickable=\"true\" password=[39m
+[36minfo[39m: [debug] Stream still not complete, waiting
+[36minfo[39m: [debug] [90m[UIAUTOMATOR STDOUT] \"false\" selected=\"false\" bounds=\"[381,245][475,385]\" resource-id=\"\" instance=\"9\"\/><android.widget.TextView index=\"10\" text=\"夜神应用中心\" class=\"android.widget.TextView\" package=\"com.vphone.launcher\" content-desc=\"夜神应用中心\" checkable=\"false\" checked=\"false\" clickable=\"true\" enabled=\"true\" focusable=\"true\" focused=\"false\" scrollable=\"false\" long-clickable=\"true\" password=\"false\" selected=\"false\" bounds=\"[5,385][99,525]\" resource-id=\"\" instance=\"10\"\/><\/android.view.View><\/android.view.View><\/android.view.View><android.widget.FrameLayout index=\"1\" text=\"\" class=\"android.widget.FrameLayout\" package=\"com.vphone.launcher\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[0,25][480,105]\" resource-id=\"com.vphone.launcher:id\/search_drop_target_bar\" instance=\"5\"\/><android.widget.LinearLayout index=\"3\" text=\"\" class=\"android.widget.LinearLayout\" package=\"com.vphone.launcher\" content-desc=\"主屏幕：第1屏，共1屏, 设置\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[232,665][248,705]\" resource-id=\"com.vphone.launcher:id\/page_indicator\" instance=\"1\"><android.widget.FrameLayout index=\"0\" text=\"\" class=\"android.widget.FrameLayout\" package=\"com.vphone.launcher\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[232,677][248,693]\" resource-id=\"\" instance=\"6\"><android.widget.ImageView index=\"0\" text=\"\" class=\"android.widget.ImageView\" package=\"com.vphone.launcher\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[232,677][248,693]\" resource-id=\"com.vphone.launcher:id\/active\" instance=\"1\"\/><\/android.widget.FrameLayout><\/android.widget.LinearLayout><android.widget.FrameLayout index=\"4\" text=\"\" class=\"android.widget.FrameLayout\" package=\"com.vphone.launcher\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[0,705][480,800]\" resource-id=\"com.vphone.launcher:id\/hotseat\" instance=\"7\"><android.view.View index=\"0\" text=\"\" class=\"android.view.View\" package=\"com.vphone.launcher\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"true\" password=\"false\" selected=\"false\" bounds=\"[10,705][470,800]\" resource-id=\"com.vphone.launcher:id\/layout\" instance=\"3\"><android.view.View index=\"0\" text=\"\" class=\"android.view.View\" package=\"com.vphone.launcher\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[10,705][470,800]\" resource-id=\"\" instance=\"4\"><android.widget.TextView index=\"0\" text=\"文件管理器\" class=\"android.widget.TextView\" package=\"com.vphone.launcher\" content-desc=\"文件管理器\" checkable=\"false\" checked=\"false\" clickable=\"true\" enabled=\"true\" focusable=\"true\" focused=\"false\" scrollable=\"false\" long-clickable=\"true\" password=\"false\" selected=\"false\" bounds=\"[5,700][107,800]\" resource-id=\"\" instance=\"11\"\/><android.widget.TextView index=\"1\" text=\"下载\" class=\"android.widget.TextView\" package=[39m
+[36minfo[39m: [debug] Stream still not complete, waiting
+[36minfo[39m: [debug] Stream still not complete, waiting
+[36minfo[39m: [debug] [90m[UIAUTOMATOR STDOUT] \"com.vphone.launcher\" content-desc=\"下载\" checkable=\"false\" checked=\"false\" clickable=\"true\" enabled=\"true\" focusable=\"true\" focused=\"false\" scrollable=\"false\" long-clickable=\"true\" password=\"false\" selected=\"false\" bounds=\"[97,700][199,800]\" resource-id=\"\" instance=\"12\"\/><android.widget.TextView index=\"2\" text=\"Next App\" class=\"android.widget.TextView\" package=\"com.vphone.launcher\" content-desc=\"应用\" checkable=\"false\" checked=\"false\" clickable=\"true\" enabled=\"true\" focusable=\"true\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[189,700][291,800]\" resource-id=\"\" instance=\"13\"\/><android.widget.TextView index=\"3\" text=\"图库\" class=\"android.widget.TextView\" package=\"com.vphone.launcher\" content-desc=\"图库\" checkable=\"false\" checked=\"false\" clickable=\"true\" enabled=\"true\" focusable=\"true\" focused=\"false\" scrollable=\"false\" long-clickable=\"true\" password=\"false\" selected=\"false\" bounds=\"[281,700][383,800]\" resource-id=\"\" instance=\"14\"\/><android.widget.TextView index=\"4\" text=\"设置\" class=\"android.widget.TextView\" package=\"com.vphone.launcher\" content-desc=\"设置\" checkable=\"false\" checked=\"false\" clickable=\"true\" enabled=\"true\" focusable=\"true\" focused=\"false\" scrollable=\"false\" long-clickable=\"true\" password=\"false\" selected=\"false\" bounds=\"[373,700][475,800]\" resource-id=\"\" instance=\"15\"\/><\/android.view.View><android.view.View index=\"1\" text=\"\" class=\"android.view.View\" package=\"com.vphone.launcher\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[10,705][470,800]\" resource-id=\"\" instance=\"5\"\/><\/android.view.View><\/android.widget.FrameLayout><\/android.widget.FrameLayout><\/android.widget.FrameLayout><\/android.widget.FrameLayout><\/android.widget.LinearLayout><\/android.widget.FrameLayout><\/hierarchy>","status":0}[/APPIUM-UIAUTO][39m
+[36minfo[39m: [debug] Responding to client with success: {"status":0,"value":"<?xml version=\"1.0\" encoding=\"UTF-8\"?><hierarchy rotation=\"0\"><android.widget.FrameLayout index=\"0\" text=\"\" class=\"android.widget.FrameLayout\" package=\"com.vphone.launcher\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[0,0][480,800]\" resource-id=\"\" instance=\"0\"><android.widget.LinearLayout index=\"0\" text=\"\" class=\"android.widget.LinearLayout\" package=\"com.vphone.launcher\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[0,0][480,800]\" resource-id=\"\" instance=\"0\"><android.widget.FrameLayout index=\"0\" text=\"\" class=\"android.widget.FrameLayout\" package=\"com.vphone.launcher\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"fal...","sessionId":"a732d0d3-7326-45a0-9565-774739b18162"}
+[36minfo[39m: [37m<-- GET /wd/hub/session/a732d0d3-7326-45a0-9565-774739b18162/source [39m[32m200[39m[90m 1329.293 ms - 14394[39m [90m{"status":0,"value":"<?xml version=\"1.0\" encoding=\"UTF-8\"?><hierarchy rotation=\"0\"><android.widget.FrameLayout index=\"0\" text=\"\" class=\"android.widget.FrameLayout\" package=\"com.vphone.launcher\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[0,0][480,800]\" resource-id=\"\" instance=\"0\"><android.widget.LinearLayout index=\"0\" text=\"\" class=\"android.widget.LinearLayout\" package=\"com.vphone.launcher\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[0,0][480,800]\" resource-id=\"\" instance=\"0\"><android.widget.FrameLayout index=\"0\" text=\"\" class=\"android.widget.FrameLayout\" package=\"com.vphone.launcher\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"fal...","sessionId":"a732d0d3-7326-45a0-9565-774739b18162"}[39m
+[36minfo[39m: [37m-->[39m [37mGET[39m [37m/wd/hub/session/a732d0d3-7326-45a0-9565-774739b18162/appium/device/current_activity[39m [90m{}[39m
+[36minfo[39m: [debug] Getting focused package and activity
+[36minfo[39m: [debug] executing cmd: D:\sdk\platform-tools\adb.exe -s 127.0.0.1:62001 shell "dumpsys window windows"
+[36minfo[39m: [debug] Responding to client with success: {"status":0,"value":".activity.PageLoading","sessionId":"a732d0d3-7326-45a0-9565-774739b18162"}
+[36minfo[39m: [37m<-- GET /wd/hub/session/a732d0d3-7326-45a0-9565-774739b18162/appium/device/current_activity [39m[32m200[39m[90m 776.786 ms - 95[39m [90m{"status":0,"value":".activity.PageLoading","sessionId":"a732d0d3-7326-45a0-9565-774739b18162"}[39m
+[36minfo[39m: [37m-->[39m [37mGET[39m [37m/wd/hub/session/a732d0d3-7326-45a0-9565-774739b18162/source[39m [90m{}[39m
+[36minfo[39m: [debug] Pushing command to appium work queue: ["source",{}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"source","params":{}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: source
+[36minfo[39m: [debug] [90m[UIAUTOMATOR STDOUT] [APPIUM-UIAUTO] [debug] Returning result: {"value":"<?xml version=\"1.0\" encoding=\"UTF-8\"?><hierarchy rotation=\"0\"><android.widget.FrameLayout index=\"0\" text=\"\" class=\"android.widget.FrameLayout\" package=\"com.vphone.launcher\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[0,0][480,800]\" resource-id=\"\" instance=\"0\"><android.widget.LinearLayout index=\"0\" text=\"\" class=\"android.widget.LinearLayout\" package=\"com.vphone.launcher\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[0,0][480,800]\" resource-id=\"\" instance=\"0\"><android.widget.FrameLayout index=\"0\" text=\"\" class=\"android.widget.FrameLayout\" package=\"com.vphone.launcher\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[0,0][480,800]\" resource-id=\"android:id\/content\" instance=\"1\"><android.widget.FrameLayout index=\"0\" text=\"\" class=\"android.widget.FrameLayout\" package=\"com.vphone.launcher\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[0,0][480,800]\" resource-id=\"com.vphone.launcher:id\/launcher\" instance=\"2\"><android.widget.FrameLayout index=\"0\" text=\"\" class=\"android.widget.FrameLayout\" package=\"com.vphone.launcher\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"[39m
+[36minfo[39m: [debug] [90m[UIAUTOMATOR STDOUT] false\" selected=\"false\" bounds=\"[0,0][480,800]\" resource-id=\"com.vphone.launcher:id\/drag_layer\" instance=\"3\"><android.view.View index=\"0\" text=\"\" class=\"android.view.View\" package=\"com.vphone.launcher\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"true\" password=\"false\" selected=\"false\" bounds=\"[0,0][480,800]\" resource-id=\"com.vphone.launcher:id\/workspace\" instance=\"0\"><android.view.View index=\"0\" text=\"\" class=\"android.view.View\" package=\"com.vphone.launcher\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"true\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"true\" password=\"false\" selected=\"false\" bounds=\"[4,105][476,665]\" resource-id=\"\" instance=\"1\"><android.view.View index=\"0\" text=\"\" class=\"android.view.View\" package=\"com.vphone.launcher\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[5,105][477,665]\" resource-id=\"\" instance=\"2\"><android.widget.TextView index=\"0\" text=\"知乎\" class=\"android.widget.TextView\" package=\"com.vphone.launcher\" content-desc=\"知乎\" checkable=\"false\" checked=\"false\" clickable=\"true\" enabled=\"true\" focusable=\"true\" focused=\"false\" scrollable=\"false\" long-clickable=\"true\" password=\"false\" selected=\"false\" bounds=\"[5,105][99,245]\" resource-id=\"\" instance=\"0\"\/><android.widget.TextView index=\"1\" text=\"医界贷\" class=\"android.widget.TextView\" package=\"com.vphone.launcher\" content-desc=\"医界贷\" checkable=\"false\" checked=\"false\" clickable=\"true\" enabled=\"true\" focusable=\"true\" focused=\"false\" scrollable=\"false\" long-clickable=\"true\" password=\"false\" selected=\"false\" bounds=\"[99,105][193,245]\" res[39m
+[36minfo[39m: [debug] [90m[UIAUTOMATOR STDOUT] ource-id=\"\" instance=\"1\"\/><android.widget.FrameLayout index=\"2\" text=\"\" class=\"android.widget.FrameLayout\" package=\"com.vphone.launcher\" content-desc=\"文件夹：Google\" checkable=\"false\" checked=\"false\" clickable=\"true\" enabled=\"true\" focusable=\"true\" focused=\"false\" scrollable=\"false\" long-clickable=\"true\" password=\"false\" selected=\"false\" bounds=\"[193,105][287,245]\" resource-id=\"\" instance=\"4\"><android.widget.TextView index=\"0\" text=\"Google\" class=\"android.widget.TextView\" package=\"com.vphone.launcher\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[196,181][284,245]\" resource-id=\"com.vphone.launcher:id\/folder_icon_name\" instance=\"2\"\/><android.widget.ImageView index=\"1\" text=\"\" class=\"android.widget.ImageView\" package=\"com.vphone.launcher\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[209,121][271,183]\" resource-id=\"com.vphone.launcher:id\/preview_background\" instance=\"0\"\/><\/android.widget.FrameLayout><android.widget.TextView index=\"3\" text=\"相机\" class=\"android.widget.TextView\" package=\"com.vphone.launcher\" content-desc=\"相机\" checkable=\"false\" checked=\"false\" clickable=\"true\" enabled=\"true\" focusable=\"true\" focused=\"false\" scrollable=\"false\" long-clickable=\"true\" password=\"false\" selected=\"false\" bounds=\"[287,105][381,245]\" resource-id=\"\" instance=\"3\"\/><android.widget.TextView index=\"4\" text=\"夜神帮助\" class=\"android.widget.TextView\" package=\"com.vphone.launcher\" content-desc=\"夜神帮助\" checkable=\"false\" checked=\"false\" clickable=\"true\" enabled=\"true\" focusable=\"true\" focused=\"false\" scrollable=\"false\" long-clickable[39m
+[36minfo[39m: [debug] [90m[UIAUTOMATOR STDOUT] =\"true\" password=\"false\" selected=\"false\" bounds=\"[381,105][475,245]\" resource-id=\"\" instance=\"4\"\/><android.widget.TextView index=\"5\" text=\"蓝灯\" class=\"android.widget.TextView\" package=\"com.vphone.launcher\" content-desc=\"蓝灯\" checkable=\"false\" checked=\"false\" clickable=\"true\" enabled=\"true\" focusable=\"true\" focused=\"false\" scrollable=\"false\" long-clickable=\"true\" password=\"false\" selected=\"false\" bounds=\"[5,245][99,385]\" resource-id=\"\" instance=\"5\"\/><android.widget.TextView index=\"6\" text=\"脉脉\" class=\"android.widget.TextView\" package=\"com.vphone.launcher\" content-desc=\"脉脉\" checkable=\"false\" checked=\"false\" clickable=\"true\" enabled=\"true\" focusable=\"true\" focused=\"false\" scrollable=\"false\" long-clickable=\"true\" password=\"false\" selected=\"false\" bounds=\"[99,245][193,385]\" resource-id=\"\" instance=\"6\"\/><android.widget.TextView index=\"7\" text=\"    Appium Settings\" class=\"android.widget.TextView\" package=\"com.vphone.launcher\" content-desc=\"Appium Settings\" checkable=\"false\" checked=\"false\" clickable=\"true\" enabled=\"true\" focusable=\"true\" focused=\"false\" scrollable=\"false\" long-clickable=\"true\" password=\"false\" selected=\"false\" bounds=\"[193,245][287,385]\" resource-id=\"\" instance=\"7\"\/><android.widget.TextView index=\"8\" text=\"Unlock\" class=\"android.widget.TextView\" package=\"com.vphone.launcher\" content-desc=\"Unlock\" checkable=\"false\" checked=\"false\" clickable=\"true\" ena[39m
+[36minfo[39m: [debug] [90m[UIAUTOMATOR STDOUT] bled=\"true\" focusable=\"true\" focused=\"false\" scrollable=\"false\" long-clickable=\"true\" password=\"false\" selected=\"false\" bounds=\"[287,245][381,385]\" resource-id=\"\" instance=\"8\"\/><android.widget.TextView index=\"9\" text=\"浏览器\" class=\"android.widget.TextView\" package=\"com.vphone.launcher\" content-desc=\"浏览器\" checkable=\"false\" checked=\"false\" clickable=\"true\" enabled=\"true\" focusable=\"true\" focused=\"false\" scrollable=\"false\" long-clickable=\"true\" password=\"false\" selected=\"false\" bounds=\"[381,245][475,385]\" resource-id=\"\" instance=\"9\"\/><android.widget.TextView index=\"10\" text=\"夜神应用中心\" class=\"android.widget.TextView\" package=\"com.vphone.launcher\" content-desc=\"夜神应用中心\" checkable=\"false\" checked=\"false\" clickable=\"true\" enabled=\"true\" focusable=\"true\" focused=\"false\" scrollable=\"false\" long-clickable=\"true\" password=\"false\" selected=\"false\" bounds=\"[5,385][99,525]\" resource-id=\"\" instance=\"10\"\/><\/android.view.View><\/android.view.View><\/android.view.View><android.widget.FrameLayout index=\"1\" text=\"\" class=\"android.widget.FrameLayout\" package=\"com.vphone.launcher\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[0,25][480,105]\" resource-id=\"com.vphone.launcher:id\/search_drop_target_bar\" instance=\"5\"\/><android.widget.LinearLayout index=\"3\" text=\"\" class=\"android.widget.LinearLayout\" package=\"com.vphone.launcher\" content-desc=\"主屏幕：第1屏，共1屏, 设置\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[232,665][248,705]\" resource-id=\"com.vphone.launcher:id\/page_indicator\" instance=\"1\"><android.widget.FrameLayout index=\"0\" text=\"\" class=\"android.widget.FrameLayout\" package=\"com.vphone.launcher\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[232,677][248,693]\" resource-id=\"\" instance=\"6\"><android.widget.ImageView index=\"0\" text=\"\" class=\"android.widget.ImageView\" package=\"com.vphone.launcher\" content-desc=\"\" checkable=\"false\" check[39m
+[36minfo[39m: [debug] [90m[UIAUTOMATOR STDOUT] ed=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[232,677][248,693]\" resource-id=\"com.vphone.launcher:id\/active\" instance=\"1\"\/><\/android.widget.FrameLayout><\/android.widget.LinearLayout><android.widget.FrameLayout index=\"4\" text=\"\" class=\"android.widget.FrameLayout\" package=\"com.vphone.launcher\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[0,705][480,800]\" resource-id=\"com.vphone.launcher:id\/hotseat\" instance=\"7\"><android.view.View index=\"0\" text=\"\" class=\"android.view.View\" package=\"com.vphone.launcher\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"true\" password=\"false\" selected=\"false\" bounds=\"[10,705][470,800]\" resource-id=\"com.vphone.launcher:id\/layout\" instance=\"3\"><android.view.View index=\"0\" text=\"\" class=\"android.view.View\" package=\"com.vphone.launcher\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[10,705][470,800]\" resource-id=\"\" instance=\"4\"><android.widget.TextView index=\"0\" text=\"文件管理器\" class=\"android.widget.TextView\" package=\"com.vphone.launcher\" content-desc=\"文件管理器\" checkable=\"false\" checked=\"false\" clickable=\"true\" enabled=\"true\" focusable=\"true\" focused=\"false\" scrollable=\"false\" long-clickable=\"true\" password=\"false\" selected=\"false\" bounds=\"[5,700][107,800]\" resource-id=\"\" instance=\"11\"\/><android.widget.TextView index=\"1\" text=\"下载\" class=\"android.widget.TextView\" package=[39m
+[36minfo[39m: [debug] [90m[UIAUTOMATOR STDOUT] \"com.vphone.launcher\" content-desc=\"下载\" checkable=\"false\" checked=\"false\" clickable=\"true\" enabled=\"true\" focusable=\"true\" focused=\"false\" scrollable=\"false\" long-clickable=\"true\" password=\"false\" selected=\"false\" bounds=\"[97,700][199,800]\" resource-id=\"\" instance=\"12\"\/><android.widget.TextView index=\"2\" text=\"Next App\" class=\"android.widget.TextView\" package=\"com.vphone.launcher\" content-desc=\"应用\" checkable=\"false\" checked=\"false\" clickable=\"true\" enabled=\"true\" focusable=\"true\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[189,700][291,800]\" resource-id=\"\" instance=\"13\"\/><android.widget.TextView index=\"3\" text=\"图库\" class=\"android.widget.TextView\" package=\"com.vphone.launcher\" content-desc=\"图库\" checkable=\"false\" checked=\"false\" clickable=\"true\" enabled=\"true\" focusable=\"true\" focused=\"false\" scrollable=\"false\" long-clickable=\"true\" password=\"false\" selected=\"false\" bounds=\"[281,700][383,800]\" resource-id=\"\" instance=\"14\"\/><android.widget.TextView index=\"4\" text=\"设置\" class=\"android.widget.TextView\" package=\"com.vphone.launcher\" content-desc=\"设置\" checkable=\"false\" checked=\"false\" clickable=\"true\" enabled=\"true\" focusable=\"true\" focused=\"false\" scrollable=\"false\" long-clickable=\"true\" password=\"false\" selected=\"false\" bounds=\"[373,700][475,800]\" resource-id=\"\" instance=\"15\"\/><\/android.view.View><android.view.View index=\"1\" text=\"\" class=\"android.view.View\" package=\"com.vphone.launcher\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[10,705][470,800]\" resource-id=\"\" instance=\"5\"\/><\/android.view.View><\/android.widget.FrameLayout><\/android.widget.FrameLayout><\/android.widget.FrameLayout><\/android.widget.Fram[39m
+[36minfo[39m: [debug] [90m[UIAUTOMATOR STDOUT] eLayout><\/android.widget.LinearLayout><\/android.widget.FrameLayout><\/hierarchy>","status":0}[/APPIUM-UIAUTO][39m
+[36minfo[39m: [debug] Stream still not complete, waiting
+[36minfo[39m: [debug] Stream still not complete, waiting
+[36minfo[39m: [debug] Stream still not complete, waiting
+[36minfo[39m: [debug] Responding to client with success: {"status":0,"value":"<?xml version=\"1.0\" encoding=\"UTF-8\"?><hierarchy rotation=\"0\"><android.widget.FrameLayout index=\"0\" text=\"\" class=\"android.widget.FrameLayout\" package=\"com.vphone.launcher\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[0,0][480,800]\" resource-id=\"\" instance=\"0\"><android.widget.LinearLayout index=\"0\" text=\"\" class=\"android.widget.LinearLayout\" package=\"com.vphone.launcher\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[0,0][480,800]\" resource-id=\"\" instance=\"0\"><android.widget.FrameLayout index=\"0\" text=\"\" class=\"android.widget.FrameLayout\" package=\"com.vphone.launcher\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"fal...","sessionId":"a732d0d3-7326-45a0-9565-774739b18162"}
+[36minfo[39m: [37m<-- GET /wd/hub/session/a732d0d3-7326-45a0-9565-774739b18162/source [39m[32m200[39m[90m 659.654 ms - 14394[39m [90m{"status":0,"value":"<?xml version=\"1.0\" encoding=\"UTF-8\"?><hierarchy rotation=\"0\"><android.widget.FrameLayout index=\"0\" text=\"\" class=\"android.widget.FrameLayout\" package=\"com.vphone.launcher\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[0,0][480,800]\" resource-id=\"\" instance=\"0\"><android.widget.LinearLayout index=\"0\" text=\"\" class=\"android.widget.LinearLayout\" package=\"com.vphone.launcher\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[0,0][480,800]\" resource-id=\"\" instance=\"0\"><android.widget.FrameLayout index=\"0\" text=\"\" class=\"android.widget.FrameLayout\" package=\"com.vphone.launcher\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"fal...","sessionId":"a732d0d3-7326-45a0-9565-774739b18162"}[39m
+[36minfo[39m: [37m-->[39m [37mGET[39m [37m/wd/hub/session/a732d0d3-7326-45a0-9565-774739b18162/appium/device/current_activity[39m [90m{}[39m
+[36minfo[39m: [debug] Getting focused package and activity
+[36minfo[39m: [debug] executing cmd: D:\sdk\platform-tools\adb.exe -s 127.0.0.1:62001 shell "dumpsys window windows"
+[36minfo[39m: [debug] Responding to client with success: {"status":0,"value":".activity.PageLoading","sessionId":"a732d0d3-7326-45a0-9565-774739b18162"}
+[36minfo[39m: [37m<-- GET /wd/hub/session/a732d0d3-7326-45a0-9565-774739b18162/appium/device/current_activity [39m[32m200[39m[90m 573.707 ms - 95[39m [90m{"status":0,"value":".activity.PageLoading","sessionId":"a732d0d3-7326-45a0-9565-774739b18162"}[39m
+[36minfo[39m: [37m-->[39m [37mGET[39m [37m/wd/hub/session/a732d0d3-7326-45a0-9565-774739b18162/source[39m [90m{}[39m
+[36minfo[39m: [debug] Pushing command to appium work queue: ["source",{}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"source","params":{}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: source
+[36minfo[39m: [debug] [90m[UIAUTOMATOR STDOUT] [APPIUM-UIAUTO] [debug] Returning result: {"value":"<?xml version=\"1.0\" encoding=\"UTF-8\"?><hierarchy rotation=\"0\"><android.widget.FrameLayout index=\"0\" text=\"\" class=\"android.widget.FrameLayout\" package=\"com.vphone.launcher\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[0,0][480,800]\" resource-id=\"\" instance=\"0\"><android.widget.LinearLayout index=\"0\" text=\"\" class=\"android.widget.LinearLayout\" package=\"com.vphone.launcher\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[0,0][480,800]\" resource-id=\"\" instance=\"0\"><android.widget.FrameLayout index=\"0\" text=\"\" class=\"android.widget.FrameLayout\" package=\"com.vphone.launcher\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[0,0][480,800]\" resource-id=\"android:id\/content\" instance=\"1\"><android.widget.FrameLayout index=\"0\" text=\"\" class=\"android.widget.FrameLayout\" package=\"com.vphone.launcher\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[0,0][480,800]\" resource-id=\"com.vphone.launcher:id\/launcher\" instance=\"2\"><android.widget.FrameLayout index=\"0\" text=\"\" class=\"android.widget.FrameLayout\" package=\"com.vphone.launcher\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"[39m
+[36minfo[39m: [debug] [90m[UIAUTOMATOR STDOUT] false\" selected=\"false\" bounds=\"[0,0][480,800]\" resource-id=\"com.vphone.launcher:id\/drag_layer\" instance=\"3\"><android.view.View index=\"0\" text=\"\" class=\"android.view.View\" package=\"com.vphone.launcher\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"true\" password=\"false\" selected=\"false\" bounds=\"[0,0][480,800]\" resource-id=\"com.vphone.launcher:id\/workspace\" instance=\"0\"><android.view.View index=\"0\" text=\"\" class=\"android.view.View\" package=\"com.vphone.launcher\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"true\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"true\" password=\"false\" selected=\"false\" bounds=\"[4,105][476,665]\" resource-id=\"\" instance=\"1\"><android.view.View index=\"0\" text=\"\" class=\"android.view.View\" package=\"com.vphone.launcher\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[5,105][477,665]\" resource-id=\"\" instance=\"2\"><android.widget.TextView index=\"0\" text=\"知乎\" class=\"android.widget.TextView\" package=\"com.vphone.launcher\" content-desc=\"知乎\" checkable=\"false\" checked=\"false\" clickable=\"true\" enabled=\"true\" focusable=\"true\" focused=\"false\" scrollable=\"false\" long-clickable=\"true\" password=\"false\" selected=\"false\" bounds=\"[5,105][99,245]\" resource-id=\"\" instance=\"0\"\/><android.widget.TextView index=\"1\" text=\"医界贷\" class=\"android.widget.TextView\" package=\"com.vphone.launcher\" content-desc=\"医界贷\" checkable=\"false\" checked=\"false\" clickable=\"true\" enabled=\"true\" focusable=\"true\" focused=\"false\" scrollable=\"false\" long-clickable=\"true\" password=\"false\" selected=\"false\" bounds=\"[99,105][193,245]\" res[39m
+[36minfo[39m: [debug] [90m[UIAUTOMATOR STDOUT] ource-id=\"\" instance=\"1\"\/><android.widget.FrameLayout index=\"2\" text=\"\" class=\"android.widget.FrameLayout\" package=\"com.vphone.launcher\" content-desc=\"文件夹：Google\" checkable=\"false\" checked=\"false\" clickable=\"true\" enabled=\"true\" focusable=\"true\" focused=\"false\" scrollable=\"false\" long-clickable=\"true\" password=\"false\" selected=\"false\" bounds=\"[193,105][287,245]\" resource-id=\"\" instance=\"4\"><android.widget.TextView index=\"0\" text=\"Google\" class=\"android.widget.TextView\" package=\"com.vphone.launcher\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[196,181][284,245]\" resource-id=\"com.vphone.launcher:id\/folder_icon_name\" instance=\"2\"\/><android.widget.ImageView index=\"1\" text=\"\" class=\"android.widget.ImageView\" package=\"com.vphone.launcher\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[209,121][271,183]\" resource-id=\"com.vphone.launcher:id\/preview_background\" instance=\"0\"\/><\/android.widget.FrameLayout><android.widget.TextView index=\"3\" text=\"相机\" class=\"android.widget.TextView\" package=\"com.vphone.launcher\" content-desc=\"相机\" checkable=\"false\" checked=\"false\" clickable=\"true\" enabled=\"true\" focusable=\"true\" focused=\"false\" scrollable=\"false\" long-clickable=\"true\" password=\"false\" selected=\"false\" bounds=\"[287,105][381,245]\" resource-id=\"\" instance=\"3\"\/><android.widget.TextView index=\"4\" text=\"夜神帮助\" class=\"android.widget.TextView\" package=\"com.vphone.launcher\" content-desc=\"夜神帮助\" checkable=\"false\" checked=\"false\" clickable=\"true\" enabled=\"true\" focusable=\"true\" focused=\"false\" scrollable=\"false\" long-clickable=\"true\" password=\"false\" selected=\"false\" bounds=\"[381,105][475,245]\" resource-id=\"\" instance=\"4\"\/><android.widget.TextView index=\"5\" text=\"蓝灯\" class=\"android.widget.TextView\" package=\"com.vphone.launcher\" content-desc=\"蓝灯\" checkable=\"false\" checked=\"false\" clickable=\"true\" enabled=\"true\" focusable=\"true\" focused=\"false\" scrollable=\"false\" long-clickable=\"true\" password=\"false\" selected=\"false\" bounds=\"[5,245][99,385]\" resource-id=\"\" instance=\"5\"\/><a[39m
+[36minfo[39m: [debug] [90m[UIAUTOMATOR STDOUT] ndroid.widget.TextView index=\"6\" text=\"脉脉\" class=\"android.widget.TextView\" package=\"com.vphone.launcher\" content-desc=\"脉脉\" checkable=\"false\" checked=\"false\" clickable=\"true\" enabled=\"true\" focusable=\"true\" focused=\"false\" scrollable=\"false\" long-clickable=\"true\" password=\"false\" selected=\"false\" bounds=\"[99,245][193,385]\" resource-id=\"\" instance=\"6\"\/><android.widget.TextView index=\"7\" text=\"    Appium Settings\" class=\"android.widget.TextView\" package=\"com.vphone.launcher\" content-desc=\"Appium Settings\" checkable=\"false\" checked=\"false\" clickable=\"true\" enabled=\"true\" focusable=\"true\" focused=\"false\" scrollable=\"false\" long-clickable=\"true\" password=\"false\" selected=\"false\" bounds=\"[193,245][287,385]\" resource-id=\"\" instance=\"7\"\/><android.widget.TextView index=\"8\" text=\"Unlock\" class=\"android.widget.TextView\" package=\"com.vphone.launcher\" content-desc=\"Unlock\" checkable=\"false\" checked=\"false\" clickable=\"true\" enabled=\"true\" focusable=\"true\" focused=\"false\" scrollable=\"false\" long-clickable=\"true\" password=\"false\" selected=\"false\" bounds=\"[287,245][381,385]\" resource-id=\"\" instance=\"8\"\/><android.widget.TextView index=\"9\" text=\"浏览器\" class=\"android.widget.TextView\" package=\"com.vphone.launcher\" content-desc=\"浏览器\" checkable=\"false\" checked=\"false\" clickable=\"true\" enabled=\"true\" focusable=\"true\" focused=\"false\" scrollable=\"false\" long-clickable=\"true\" password=[39m
+[36minfo[39m: [debug] Stream still not complete, waiting
+[36minfo[39m: [debug] [90m[UIAUTOMATOR STDOUT] \"false\" selected=\"false\" bounds=\"[381,245][475,385]\" resource-id=\"\" instance=\"9\"\/><android.widget.TextView index=\"10\" text=\"夜神应用中心\" class=\"android.widget.TextView\" package=\"com.vphone.launcher\" content-desc=\"夜神应用中心\" checkable=\"false\" checked=\"false\" clickable=\"true\" enabled=\"true\" focusable=\"true\" focused=\"false\" scrollable=\"false\" long-clickable=\"true\" password=\"false\" selected=\"false\" bounds=\"[5,385][99,525]\" resource-id=\"\" instance=\"10\"\/><\/android.view.View><\/android.view.View><\/android.view.View><android.widget.FrameLayout index=\"1\" text=\"\" class=\"android.widget.FrameLayout\" package=\"com.vphone.launcher\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[0,25][480,105]\" resource-id=\"com.vphone.launcher:id\/search_drop_target_bar\" instance=\"5\"\/><android.widget.LinearLayout index=\"3\" text=\"\" class=\"android.widget.LinearLayout\" package=\"com.vphone.launcher\" content-desc=\"主屏幕：第1屏，共1屏, 设置\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[232,665][248,705]\" resource-id=\"com.vphone.launcher:id\/page_indicator\" instance=\"1\"><android.widget.FrameLayout index=\"0\" text=\"\" class=\"android.widget.FrameLayout\" package=\"com.vphone.launcher\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[232,677][248,693]\" resource-id=\"\" instance=\"6\"><android.widget.ImageView index=\"0\" text=\"\" class=\"android.widget.ImageView\" package=\"com.vphone.launcher\" content-desc=\"\" checkable=\"false\" check[39m
+[36minfo[39m: [debug] [90m[UIAUTOMATOR STDOUT] ed=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[232,677][248,693]\" resource-id=\"com.vphone.launcher:id\/active\" instance=\"1\"\/><\/android.widget.FrameLayout><\/android.widget.LinearLayout><android.widget.FrameLayout index=\"4\" text=\"\" class=\"android.widget.FrameLayout\" package=\"com.vphone.launcher\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[0,705][480,800]\" resource-id=\"com.vphone.launcher:id\/hotseat\" instance=\"7\"><android.view.View index=\"0\" text=\"\" class=\"android.view.View\" package=\"com.vphone.launcher\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"true\" password=\"false\" selected=\"false\" bounds=\"[10,705][470,800]\" resource-id=\"com.vphone.launcher:id\/layout\" instance=\"3\"><android.view.View index=\"0\" text=\"\" class=\"android.view.View\" package=\"com.vphone.launcher\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[10,705][470,800]\" resource-id=\"\" instance=\"4\"><android.widget.TextView index=\"0\" text=\"文件管理器\" class=\"android.widget.TextView\" package=\"com.vphone.launcher\" content-desc=\"文件管理器\" checkable=\"false\" checked=\"false\" clickable=\"true\" enabled=\"true\" focusable=\"true\" focused=\"false\" scrollable=\"false\" long-clickable=\"true\" password=\"false\" selected=\"false\" bounds=\"[5,700][107,800]\" resource-id=\"\" instance=\"11\"\/><android.widget.TextView index=\"1\" text=\"下载\" class=\"android.widget.TextView\" package=[39m
+[36minfo[39m: [debug] Stream still not complete, waiting
+[36minfo[39m: [debug] [90m[UIAUTOMATOR STDOUT] \"com.vphone.launcher\" content-desc=\"下载\" checkable=\"false\" checked=\"false\" clickable=\"true\" enabled=\"true\" focusable=\"true\" focused=\"false\" scrollable=\"false\" long-clickable=\"true\" password=\"false\" selected=\"false\" bounds=\"[97,700][199,800]\" resource-id=\"\" instance=\"12\"\/><android.widget.TextView index=\"2\" text=\"Next App\" class=\"android.widget.TextView\" package=\"com.vphone.launcher\" content-desc=\"应用\" checkable=\"false\" checked=\"false\" clickable=\"true\" enabled=\"true\" focusable=\"true\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[189,700][291,800]\" resource-id=\"\" instance=\"13\"\/><android.widget.TextView index=\"3\" text=\"图库\" class=\"android.widget.TextView\" package=\"com.vphone.launcher\" content-desc=\"图库\" checkable=\"false\" checked=\"false\" clickable=\"true\" enabled=\"true\" focusable=\"true\" focused=\"false\" scrollable=\"false\" long-clickable=\"true\" password=\"false\" selected=\"false\" bounds=\"[281,700][383,800]\" resource-id=\"\" instance=\"14\"\/><android.widget.TextView index=\"4\" text=\"设置\" class=\"android.widget.TextView\" package=\"com.vphone.launcher\" content-desc=\"设置\" checkable=\"false\" checked=\"false\" clickable=\"true\" enabled=\"true\" focusable=\"true\" focused=\"false\" scrollable=\"false\" long-clickable=\"true\" password=\"false\" selected=\"false\" bounds=\"[373,700][475,800]\" resource-id=\"\" instance=\"15\"\/><\/android.view.View>[39m
+[36minfo[39m: [debug] [90m[UIAUTOMATOR STDOUT] <android.view.View index=\"1\" text=\"\" class=\"android.view.View\" package=\"com.vphone.launcher\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[10,705][470,800]\" resource-id=\"\" instance=\"5\"\/><\/android.view.View><\/android.widget.FrameLayout><\/android.widget.FrameLayout><\/android.widget.FrameLayout><\/android.widget.FrameLayout><\/android.widget.LinearLayout><\/android.widget.FrameLayout><\/hierarchy>","status":0}[/APPIUM-UIAUTO][39m
+[36minfo[39m: [debug] Stream still not complete, waiting
+[36minfo[39m: [debug] Responding to client with success: {"status":0,"value":"<?xml version=\"1.0\" encoding=\"UTF-8\"?><hierarchy rotation=\"0\"><android.widget.FrameLayout index=\"0\" text=\"\" class=\"android.widget.FrameLayout\" package=\"com.vphone.launcher\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[0,0][480,800]\" resource-id=\"\" instance=\"0\"><android.widget.LinearLayout index=\"0\" text=\"\" class=\"android.widget.LinearLayout\" package=\"com.vphone.launcher\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[0,0][480,800]\" resource-id=\"\" instance=\"0\"><android.widget.FrameLayout index=\"0\" text=\"\" class=\"android.widget.FrameLayout\" package=\"com.vphone.launcher\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"fal...","sessionId":"a732d0d3-7326-45a0-9565-774739b18162"}
+[36minfo[39m: [37m<-- GET /wd/hub/session/a732d0d3-7326-45a0-9565-774739b18162/source [39m[32m200[39m[90m 580.247 ms - 14394[39m [90m{"status":0,"value":"<?xml version=\"1.0\" encoding=\"UTF-8\"?><hierarchy rotation=\"0\"><android.widget.FrameLayout index=\"0\" text=\"\" class=\"android.widget.FrameLayout\" package=\"com.vphone.launcher\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[0,0][480,800]\" resource-id=\"\" instance=\"0\"><android.widget.LinearLayout index=\"0\" text=\"\" class=\"android.widget.LinearLayout\" package=\"com.vphone.launcher\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[0,0][480,800]\" resource-id=\"\" instance=\"0\"><android.widget.FrameLayout index=\"0\" text=\"\" class=\"android.widget.FrameLayout\" package=\"com.vphone.launcher\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"fal...","sessionId":"a732d0d3-7326-45a0-9565-774739b18162"}[39m
+[36minfo[39m: [37m-->[39m [37mPOST[39m [37m/wd/hub/session/a732d0d3-7326-45a0-9565-774739b18162/element[39m [90m{"using":"name","value":"我"}[39m
+[33mwarn[39m: [DEPRECATED] The name locator strategy has been deprecated and will be removed.  Please use the accessibility id locator strategy instead.
+[36minfo[39m: [debug] Waiting up to 10000ms for condition
+[36minfo[39m: [debug] Pushing command to appium work queue: ["find",{"strategy":"name","selector":"我","context":"","multiple":false}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"name","selector":"我","context":"","multiple":false}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: find
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding 我 using NAME with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[DESCRIPTION=我, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[TEXT=我, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Failed to locate element. Clearing Accessibility cache and retrying.
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding 我 using NAME with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[DESCRIPTION=我, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[TEXT=我, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"value":"No element found","status":7}
+[36minfo[39m: [debug] Waited for 668ms so far
+[36minfo[39m: [debug] Pushing command to appium work queue: ["find",{"strategy":"name","selector":"我","context":"","multiple":false}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"name","selector":"我","context":"","multiple":false}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: find
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding 我 using NAME with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[DESCRIPTION=我, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[TEXT=我, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Failed to locate element. Clearing Accessibility cache and retrying.
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding 我 using NAME with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[DESCRIPTION=我, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[TEXT=我, INSTANCE=0]
+[36minfo[39m: [debug] Waited for 3572ms so far
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"value":"No element found","status":7}
+[36minfo[39m: [debug] Pushing command to appium work queue: ["find",{"strategy":"name","selector":"我","context":"","multiple":false}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"name","selector":"我","context":"","multiple":false}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: find
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding 我 using NAME with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[DESCRIPTION=我, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[TEXT=我, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Failed to locate element. Clearing Accessibility cache and retrying.
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding 我 using NAME with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[DESCRIPTION=我, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[TEXT=我, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"value":"No element found","status":7}
+[36minfo[39m: [debug] Waited for 5998ms so far
+[36minfo[39m: [debug] Pushing command to appium work queue: ["find",{"strategy":"name","selector":"我","context":"","multiple":false}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"name","selector":"我","context":"","multiple":false}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: find
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding 我 using NAME with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[DESCRIPTION=我, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[TEXT=我, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Failed to locate element. Clearing Accessibility cache and retrying.
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding 我 using NAME with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[DESCRIPTION=我, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[TEXT=我, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"value":"No element found","status":7}
+[36minfo[39m: [debug] Waited for 6887ms so far
+[36minfo[39m: [debug] Pushing command to appium work queue: ["find",{"strategy":"name","selector":"我","context":"","multiple":false}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"name","selector":"我","context":"","multiple":false}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: find
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding 我 using NAME with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[DESCRIPTION=我, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[TEXT=我, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Failed to locate element. Clearing Accessibility cache and retrying.
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding 我 using NAME with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[DESCRIPTION=我, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[TEXT=我, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"value":"No element found","status":7}
+[36minfo[39m: [debug] Waited for 7855ms so far
+[36minfo[39m: [debug] Pushing command to appium work queue: ["find",{"strategy":"name","selector":"我","context":"","multiple":false}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"name","selector":"我","context":"","multiple":false}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: find
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding 我 using NAME with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[DESCRIPTION=我, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[TEXT=我, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Failed to locate element. Clearing Accessibility cache and retrying.
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding 我 using NAME with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[DESCRIPTION=我, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[TEXT=我, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"value":"No element found","status":7}
+[36minfo[39m: [debug] Condition unmet after 16828ms. Timing out.
+[36minfo[39m: [debug] Responding to client with error: {"status":7,"value":{"message":"An element could not be located on the page using the given search parameters.","origValue":"No element found"},"sessionId":"a732d0d3-7326-45a0-9565-774739b18162"}
+[36minfo[39m: [37m<-- POST /wd/hub/session/a732d0d3-7326-45a0-9565-774739b18162/element [39m[31m500[39m[90m 16831.597 ms - 195[39m [90m[39m
+[36minfo[39m: [37m-->[39m [37mPOST[39m [37m/wd/hub/session/a732d0d3-7326-45a0-9565-774739b18162/element[39m [90m{"using":"id","value":"com.yjd.app:id/mine_btn_withdraw"}[39m
+[36minfo[39m: [debug] Waiting up to 10000ms for condition
+[36minfo[39m: [debug] Pushing command to appium work queue: ["find",{"strategy":"id","selector":"com.yjd.app:id/mine_btn_withdraw","context":"","multiple":false}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"com.yjd.app:id/mine_btn_withdraw","context":"","multiple":false}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: find
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding com.yjd.app:id/mine_btn_withdraw using ID with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[INSTANCE=0, RESOURCE_ID=com.yjd.app:id/mine_btn_withdraw]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Failed to locate element. Clearing Accessibility cache and retrying.
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding com.yjd.app:id/mine_btn_withdraw using ID with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[INSTANCE=0, RESOURCE_ID=com.yjd.app:id/mine_btn_withdraw]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"value":"No element found","status":7}
+[36minfo[39m: [debug] Waited for 3044ms so far
+[36minfo[39m: [debug] Pushing command to appium work queue: ["find",{"strategy":"id","selector":"com.yjd.app:id/mine_btn_withdraw","context":"","multiple":false}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"com.yjd.app:id/mine_btn_withdraw","context":"","multiple":false}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: find
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding com.yjd.app:id/mine_btn_withdraw using ID with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[INSTANCE=0, RESOURCE_ID=com.yjd.app:id/mine_btn_withdraw]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Failed to locate element. Clearing Accessibility cache and retrying.
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding com.yjd.app:id/mine_btn_withdraw using ID with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[INSTANCE=0, RESOURCE_ID=com.yjd.app:id/mine_btn_withdraw]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"value":"No element found","status":7}
+[36minfo[39m: [debug] Waited for 7033ms so far
+[36minfo[39m: [debug] Pushing command to appium work queue: ["find",{"strategy":"id","selector":"com.yjd.app:id/mine_btn_withdraw","context":"","multiple":false}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"com.yjd.app:id/mine_btn_withdraw","context":"","multiple":false}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: find
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding com.yjd.app:id/mine_btn_withdraw using ID with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[INSTANCE=0, RESOURCE_ID=com.yjd.app:id/mine_btn_withdraw]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Failed to locate element. Clearing Accessibility cache and retrying.
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding com.yjd.app:id/mine_btn_withdraw using ID with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[INSTANCE=0, RESOURCE_ID=com.yjd.app:id/mine_btn_withdraw]
+[36minfo[39m: [debug] Condition unmet after 10166ms. Timing out.
+[36minfo[39m: [debug] Responding to client with error: {"status":7,"value":{"message":"An element could not be located on the page using the given search parameters.","origValue":"No element found"},"sessionId":"a732d0d3-7326-45a0-9565-774739b18162"}
+[36minfo[39m: [37m<-- POST /wd/hub/session/a732d0d3-7326-45a0-9565-774739b18162/element [39m[31m500[39m[90m 10168.533 ms - 195[39m [90m[39m
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"value":"No element found","status":7}
+[36minfo[39m: [37m-->[39m [37mPOST[39m [37m/wd/hub/session/a732d0d3-7326-45a0-9565-774739b18162/element[39m [90m{"using":"id","value":"com.yjd.app:id/ed_withdrawmoney"}[39m
+[36minfo[39m: [debug] Waiting up to 10000ms for condition
+[36minfo[39m: [debug] Pushing command to appium work queue: ["find",{"strategy":"id","selector":"com.yjd.app:id/ed_withdrawmoney","context":"","multiple":false}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"com.yjd.app:id/ed_withdrawmoney","context":"","multiple":false}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: find
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding com.yjd.app:id/ed_withdrawmoney using ID with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[INSTANCE=0, RESOURCE_ID=com.yjd.app:id/ed_withdrawmoney]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Failed to locate element. Clearing Accessibility cache and retrying.
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding com.yjd.app:id/ed_withdrawmoney using ID with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[INSTANCE=0, RESOURCE_ID=com.yjd.app:id/ed_withdrawmoney]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"value":"No element found","status":7}
+[36minfo[39m: [debug] Waited for 852ms so far
+[36minfo[39m: [debug] Pushing command to appium work queue: ["find",{"strategy":"id","selector":"com.yjd.app:id/ed_withdrawmoney","context":"","multiple":false}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"com.yjd.app:id/ed_withdrawmoney","context":"","multiple":false}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: find
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding com.yjd.app:id/ed_withdrawmoney using ID with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[INSTANCE=0, RESOURCE_ID=com.yjd.app:id/ed_withdrawmoney]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Failed to locate element. Clearing Accessibility cache and retrying.
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding com.yjd.app:id/ed_withdrawmoney using ID with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[INSTANCE=0, RESOURCE_ID=com.yjd.app:id/ed_withdrawmoney]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"value":"No element found","status":7}
+[36minfo[39m: [debug] Waited for 3669ms so far
+[36minfo[39m: [debug] Pushing command to appium work queue: ["find",{"strategy":"id","selector":"com.yjd.app:id/ed_withdrawmoney","context":"","multiple":false}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"com.yjd.app:id/ed_withdrawmoney","context":"","multiple":false}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: find
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding com.yjd.app:id/ed_withdrawmoney using ID with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[INSTANCE=0, RESOURCE_ID=com.yjd.app:id/ed_withdrawmoney]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Failed to locate element. Clearing Accessibility cache and retrying.
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding com.yjd.app:id/ed_withdrawmoney using ID with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[INSTANCE=0, RESOURCE_ID=com.yjd.app:id/ed_withdrawmoney]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"value":"No element found","status":7}
+[36minfo[39m: [debug] Waited for 4689ms so far
+[36minfo[39m: [debug] Pushing command to appium work queue: ["find",{"strategy":"id","selector":"com.yjd.app:id/ed_withdrawmoney","context":"","multiple":false}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"com.yjd.app:id/ed_withdrawmoney","context":"","multiple":false}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: find
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding com.yjd.app:id/ed_withdrawmoney using ID with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[INSTANCE=0, RESOURCE_ID=com.yjd.app:id/ed_withdrawmoney]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Failed to locate element. Clearing Accessibility cache and retrying.
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding com.yjd.app:id/ed_withdrawmoney using ID with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[INSTANCE=0, RESOURCE_ID=com.yjd.app:id/ed_withdrawmoney]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"value":"No element found","status":7}
+[36minfo[39m: [debug] Waited for 7527ms so far
+[36minfo[39m: [debug] Pushing command to appium work queue: ["find",{"strategy":"id","selector":"com.yjd.app:id/ed_withdrawmoney","context":"","multiple":false}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"com.yjd.app:id/ed_withdrawmoney","context":"","multiple":false}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: find
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding com.yjd.app:id/ed_withdrawmoney using ID with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[INSTANCE=0, RESOURCE_ID=com.yjd.app:id/ed_withdrawmoney]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Failed to locate element. Clearing Accessibility cache and retrying.
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding com.yjd.app:id/ed_withdrawmoney using ID with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[INSTANCE=0, RESOURCE_ID=com.yjd.app:id/ed_withdrawmoney]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"value":"No element found","status":7}
+[36minfo[39m: [debug] Waited for 9251ms so far
+[36minfo[39m: [debug] Pushing command to appium work queue: ["find",{"strategy":"id","selector":"com.yjd.app:id/ed_withdrawmoney","context":"","multiple":false}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"com.yjd.app:id/ed_withdrawmoney","context":"","multiple":false}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: find
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding com.yjd.app:id/ed_withdrawmoney using ID with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[INSTANCE=0, RESOURCE_ID=com.yjd.app:id/ed_withdrawmoney]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Failed to locate element. Clearing Accessibility cache and retrying.
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding com.yjd.app:id/ed_withdrawmoney using ID with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[INSTANCE=0, RESOURCE_ID=com.yjd.app:id/ed_withdrawmoney]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"value":"No element found","status":7}
+[36minfo[39m: [debug] Condition unmet after 10215ms. Timing out.
+[36minfo[39m: [debug] Responding to client with error: {"status":7,"value":{"message":"An element could not be located on the page using the given search parameters.","origValue":"No element found"},"sessionId":"a732d0d3-7326-45a0-9565-774739b18162"}
+[36minfo[39m: [37m<-- POST /wd/hub/session/a732d0d3-7326-45a0-9565-774739b18162/element [39m[31m500[39m[90m 10215.006 ms - 195[39m [90m[39m
+[36minfo[39m: [37m-->[39m [37mPOST[39m [37m/wd/hub/session/a732d0d3-7326-45a0-9565-774739b18162/element[39m [90m{"using":"id","value":"com.yjd.app:id/ed_transaction_psd"}[39m
+[36minfo[39m: [debug] Waiting up to 10000ms for condition
+[36minfo[39m: [debug] Pushing command to appium work queue: ["find",{"strategy":"id","selector":"com.yjd.app:id/ed_transaction_psd","context":"","multiple":false}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"com.yjd.app:id/ed_transaction_psd","context":"","multiple":false}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: find
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding com.yjd.app:id/ed_transaction_psd using ID with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[INSTANCE=0, RESOURCE_ID=com.yjd.app:id/ed_transaction_psd]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Failed to locate element. Clearing Accessibility cache and retrying.
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding com.yjd.app:id/ed_transaction_psd using ID with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[INSTANCE=0, RESOURCE_ID=com.yjd.app:id/ed_transaction_psd]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"value":"No element found","status":7}
+[36minfo[39m: [debug] Waited for 489ms so far
+[36minfo[39m: [debug] Pushing command to appium work queue: ["find",{"strategy":"id","selector":"com.yjd.app:id/ed_transaction_psd","context":"","multiple":false}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"com.yjd.app:id/ed_transaction_psd","context":"","multiple":false}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: find
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding com.yjd.app:id/ed_transaction_psd using ID with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[INSTANCE=0, RESOURCE_ID=com.yjd.app:id/ed_transaction_psd]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Failed to locate element. Clearing Accessibility cache and retrying.
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding com.yjd.app:id/ed_transaction_psd using ID with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[INSTANCE=0, RESOURCE_ID=com.yjd.app:id/ed_transaction_psd]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"value":"No element found","status":7}
+[36minfo[39m: [debug] Waited for 1705ms so far
+[36minfo[39m: [debug] Pushing command to appium work queue: ["find",{"strategy":"id","selector":"com.yjd.app:id/ed_transaction_psd","context":"","multiple":false}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"com.yjd.app:id/ed_transaction_psd","context":"","multiple":false}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: find
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding com.yjd.app:id/ed_transaction_psd using ID with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[INSTANCE=0, RESOURCE_ID=com.yjd.app:id/ed_transaction_psd]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Failed to locate element. Clearing Accessibility cache and retrying.
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding com.yjd.app:id/ed_transaction_psd using ID with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[INSTANCE=0, RESOURCE_ID=com.yjd.app:id/ed_transaction_psd]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"value":"No element found","status":7}
+[36minfo[39m: [debug] Waited for 2935ms so far
+[36minfo[39m: [debug] Pushing command to appium work queue: ["find",{"strategy":"id","selector":"com.yjd.app:id/ed_transaction_psd","context":"","multiple":false}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"com.yjd.app:id/ed_transaction_psd","context":"","multiple":false}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: find
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding com.yjd.app:id/ed_transaction_psd using ID with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[INSTANCE=0, RESOURCE_ID=com.yjd.app:id/ed_transaction_psd]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Failed to locate element. Clearing Accessibility cache and retrying.
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding com.yjd.app:id/ed_transaction_psd using ID with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[INSTANCE=0, RESOURCE_ID=com.yjd.app:id/ed_transaction_psd]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"value":"No element found","status":7}
+[36minfo[39m: [debug] Waited for 4037ms so far
+[36minfo[39m: [debug] Pushing command to appium work queue: ["find",{"strategy":"id","selector":"com.yjd.app:id/ed_transaction_psd","context":"","multiple":false}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"com.yjd.app:id/ed_transaction_psd","context":"","multiple":false}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: find
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding com.yjd.app:id/ed_transaction_psd using ID with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[INSTANCE=0, RESOURCE_ID=com.yjd.app:id/ed_transaction_psd]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Failed to locate element. Clearing Accessibility cache and retrying.
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding com.yjd.app:id/ed_transaction_psd using ID with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[INSTANCE=0, RESOURCE_ID=com.yjd.app:id/ed_transaction_psd]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"value":"No element found","status":7}
+[36minfo[39m: [debug] Waited for 5097ms so far
+[36minfo[39m: [debug] Pushing command to appium work queue: ["find",{"strategy":"id","selector":"com.yjd.app:id/ed_transaction_psd","context":"","multiple":false}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"com.yjd.app:id/ed_transaction_psd","context":"","multiple":false}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: find
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding com.yjd.app:id/ed_transaction_psd using ID with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[INSTANCE=0, RESOURCE_ID=com.yjd.app:id/ed_transaction_psd]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Failed to locate element. Clearing Accessibility cache and retrying.
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding com.yjd.app:id/ed_transaction_psd using ID with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[INSTANCE=0, RESOURCE_ID=com.yjd.app:id/ed_transaction_psd]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"value":"No element found","status":7}
+[36minfo[39m: [debug] Waited for 6118ms so far
+[36minfo[39m: [debug] Pushing command to appium work queue: ["find",{"strategy":"id","selector":"com.yjd.app:id/ed_transaction_psd","context":"","multiple":false}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"com.yjd.app:id/ed_transaction_psd","context":"","multiple":false}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: find
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding com.yjd.app:id/ed_transaction_psd using ID with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[INSTANCE=0, RESOURCE_ID=com.yjd.app:id/ed_transaction_psd]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Failed to locate element. Clearing Accessibility cache and retrying.
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding com.yjd.app:id/ed_transaction_psd using ID with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[INSTANCE=0, RESOURCE_ID=com.yjd.app:id/ed_transaction_psd]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"value":"No element found","status":7}
+[36minfo[39m: [debug] Waited for 7018ms so far
+[36minfo[39m: [debug] Pushing command to appium work queue: ["find",{"strategy":"id","selector":"com.yjd.app:id/ed_transaction_psd","context":"","multiple":false}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"com.yjd.app:id/ed_transaction_psd","context":"","multiple":false}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: find
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding com.yjd.app:id/ed_transaction_psd using ID with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[INSTANCE=0, RESOURCE_ID=com.yjd.app:id/ed_transaction_psd]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Failed to locate element. Clearing Accessibility cache and retrying.
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding com.yjd.app:id/ed_transaction_psd using ID with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[INSTANCE=0, RESOURCE_ID=com.yjd.app:id/ed_transaction_psd]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"value":"No element found","status":7}
+[36minfo[39m: [debug] Waited for 8037ms so far
+[36minfo[39m: [debug] Pushing command to appium work queue: ["find",{"strategy":"id","selector":"com.yjd.app:id/ed_transaction_psd","context":"","multiple":false}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"com.yjd.app:id/ed_transaction_psd","context":"","multiple":false}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: find
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding com.yjd.app:id/ed_transaction_psd using ID with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[INSTANCE=0, RESOURCE_ID=com.yjd.app:id/ed_transaction_psd]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Failed to locate element. Clearing Accessibility cache and retrying.
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding com.yjd.app:id/ed_transaction_psd using ID with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[INSTANCE=0, RESOURCE_ID=com.yjd.app:id/ed_transaction_psd]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"value":"No element found","status":7}
+[36minfo[39m: [debug] Waited for 9241ms so far
+[36minfo[39m: [debug] Pushing command to appium work queue: ["find",{"strategy":"id","selector":"com.yjd.app:id/ed_transaction_psd","context":"","multiple":false}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"com.yjd.app:id/ed_transaction_psd","context":"","multiple":false}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: find
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding com.yjd.app:id/ed_transaction_psd using ID with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[INSTANCE=0, RESOURCE_ID=com.yjd.app:id/ed_transaction_psd]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Failed to locate element. Clearing Accessibility cache and retrying.
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding com.yjd.app:id/ed_transaction_psd using ID with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[INSTANCE=0, RESOURCE_ID=com.yjd.app:id/ed_transaction_psd]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"value":"No element found","status":7}
+[36minfo[39m: [debug] Waited for 9968ms so far
+[36minfo[39m: [debug] Pushing command to appium work queue: ["find",{"strategy":"id","selector":"com.yjd.app:id/ed_transaction_psd","context":"","multiple":false}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"com.yjd.app:id/ed_transaction_psd","context":"","multiple":false}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: find
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding com.yjd.app:id/ed_transaction_psd using ID with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[INSTANCE=0, RESOURCE_ID=com.yjd.app:id/ed_transaction_psd]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Failed to locate element. Clearing Accessibility cache and retrying.
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding com.yjd.app:id/ed_transaction_psd using ID with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[INSTANCE=0, RESOURCE_ID=com.yjd.app:id/ed_transaction_psd]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"value":"No element found","status":7}
+[36minfo[39m: [debug] Condition unmet after 10730ms. Timing out.
+[36minfo[39m: [debug] Responding to client with error: {"status":7,"value":{"message":"An element could not be located on the page using the given search parameters.","origValue":"No element found"},"sessionId":"a732d0d3-7326-45a0-9565-774739b18162"}
+[36minfo[39m: [37m<-- POST /wd/hub/session/a732d0d3-7326-45a0-9565-774739b18162/element [39m[31m500[39m[90m 10734.329 ms - 195[39m [90m[39m
+[36minfo[39m: [37m-->[39m [37mPOST[39m [37m/wd/hub/session/a732d0d3-7326-45a0-9565-774739b18162/element[39m [90m{"using":"id","value":"com.yjd.app:id/item_button_sure"}[39m
+[36minfo[39m: [debug] Waiting up to 10000ms for condition
+[36minfo[39m: [debug] Pushing command to appium work queue: ["find",{"strategy":"id","selector":"com.yjd.app:id/item_button_sure","context":"","multiple":false}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"com.yjd.app:id/item_button_sure","context":"","multiple":false}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: find
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding com.yjd.app:id/item_button_sure using ID with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[INSTANCE=0, RESOURCE_ID=com.yjd.app:id/item_button_sure]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Failed to locate element. Clearing Accessibility cache and retrying.
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding com.yjd.app:id/item_button_sure using ID with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[INSTANCE=0, RESOURCE_ID=com.yjd.app:id/item_button_sure]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"value":"No element found","status":7}
+[36minfo[39m: [debug] Waited for 1281ms so far
+[36minfo[39m: [debug] Pushing command to appium work queue: ["find",{"strategy":"id","selector":"com.yjd.app:id/item_button_sure","context":"","multiple":false}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"com.yjd.app:id/item_button_sure","context":"","multiple":false}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: find
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding com.yjd.app:id/item_button_sure using ID with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[INSTANCE=0, RESOURCE_ID=com.yjd.app:id/item_button_sure]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Failed to locate element. Clearing Accessibility cache and retrying.
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding com.yjd.app:id/item_button_sure using ID with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[INSTANCE=0, RESOURCE_ID=com.yjd.app:id/item_button_sure]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"value":"No element found","status":7}
+[36minfo[39m: [debug] Waited for 3420ms so far
+[36minfo[39m: [debug] Pushing command to appium work queue: ["find",{"strategy":"id","selector":"com.yjd.app:id/item_button_sure","context":"","multiple":false}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"com.yjd.app:id/item_button_sure","context":"","multiple":false}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: find
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding com.yjd.app:id/item_button_sure using ID with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[INSTANCE=0, RESOURCE_ID=com.yjd.app:id/item_button_sure]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Failed to locate element. Clearing Accessibility cache and retrying.
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding com.yjd.app:id/item_button_sure using ID with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[INSTANCE=0, RESOURCE_ID=com.yjd.app:id/item_button_sure]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"value":"No element found","status":7}
+[36minfo[39m: [debug] Waited for 4460ms so far
+[36minfo[39m: [debug] Pushing command to appium work queue: ["find",{"strategy":"id","selector":"com.yjd.app:id/item_button_sure","context":"","multiple":false}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"com.yjd.app:id/item_button_sure","context":"","multiple":false}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: find
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding com.yjd.app:id/item_button_sure using ID with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[INSTANCE=0, RESOURCE_ID=com.yjd.app:id/item_button_sure]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Failed to locate element. Clearing Accessibility cache and retrying.
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding com.yjd.app:id/item_button_sure using ID with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[INSTANCE=0, RESOURCE_ID=com.yjd.app:id/item_button_sure]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"value":"No element found","status":7}
+[36minfo[39m: [debug] Waited for 5824ms so far
+[36minfo[39m: [debug] Pushing command to appium work queue: ["find",{"strategy":"id","selector":"com.yjd.app:id/item_button_sure","context":"","multiple":false}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"com.yjd.app:id/item_button_sure","context":"","multiple":false}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: find
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding com.yjd.app:id/item_button_sure using ID with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[INSTANCE=0, RESOURCE_ID=com.yjd.app:id/item_button_sure]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Failed to locate element. Clearing Accessibility cache and retrying.
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding com.yjd.app:id/item_button_sure using ID with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[INSTANCE=0, RESOURCE_ID=com.yjd.app:id/item_button_sure]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"value":"No element found","status":7}
+[36minfo[39m: [debug] Waited for 7056ms so far
+[36minfo[39m: [debug] Pushing command to appium work queue: ["find",{"strategy":"id","selector":"com.yjd.app:id/item_button_sure","context":"","multiple":false}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"com.yjd.app:id/item_button_sure","context":"","multiple":false}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: find
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding com.yjd.app:id/item_button_sure using ID with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[INSTANCE=0, RESOURCE_ID=com.yjd.app:id/item_button_sure]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Failed to locate element. Clearing Accessibility cache and retrying.
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding com.yjd.app:id/item_button_sure using ID with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[INSTANCE=0, RESOURCE_ID=com.yjd.app:id/item_button_sure]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"value":"No element found","status":7}
+[36minfo[39m: [debug] Waited for 7867ms so far
+[36minfo[39m: [debug] Pushing command to appium work queue: ["find",{"strategy":"id","selector":"com.yjd.app:id/item_button_sure","context":"","multiple":false}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"com.yjd.app:id/item_button_sure","context":"","multiple":false}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: find
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding com.yjd.app:id/item_button_sure using ID with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[INSTANCE=0, RESOURCE_ID=com.yjd.app:id/item_button_sure]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Failed to locate element. Clearing Accessibility cache and retrying.
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding com.yjd.app:id/item_button_sure using ID with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[INSTANCE=0, RESOURCE_ID=com.yjd.app:id/item_button_sure]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"value":"No element found","status":7}
+[36minfo[39m: [debug] Waited for 8613ms so far
+[36minfo[39m: [debug] Pushing command to appium work queue: ["find",{"strategy":"id","selector":"com.yjd.app:id/item_button_sure","context":"","multiple":false}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"com.yjd.app:id/item_button_sure","context":"","multiple":false}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: find
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding com.yjd.app:id/item_button_sure using ID with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[INSTANCE=0, RESOURCE_ID=com.yjd.app:id/item_button_sure]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Failed to locate element. Clearing Accessibility cache and retrying.
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding com.yjd.app:id/item_button_sure using ID with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[INSTANCE=0, RESOURCE_ID=com.yjd.app:id/item_button_sure]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"value":"No element found","status":7}
+[36minfo[39m: [debug] Waited for 9449ms so far
+[36minfo[39m: [debug] Pushing command to appium work queue: ["find",{"strategy":"id","selector":"com.yjd.app:id/item_button_sure","context":"","multiple":false}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"com.yjd.app:id/item_button_sure","context":"","multiple":false}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: find
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding com.yjd.app:id/item_button_sure using ID with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[INSTANCE=0, RESOURCE_ID=com.yjd.app:id/item_button_sure]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Failed to locate element. Clearing Accessibility cache and retrying.
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding com.yjd.app:id/item_button_sure using ID with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[INSTANCE=0, RESOURCE_ID=com.yjd.app:id/item_button_sure]
+[36minfo[39m: [debug] Condition unmet after 10944ms. Timing out.
+[36minfo[39m: [debug] Responding to client with error: {"status":7,"value":{"message":"An element could not be located on the page using the given search parameters.","origValue":"No element found"},"sessionId":"a732d0d3-7326-45a0-9565-774739b18162"}
+[36minfo[39m: [37m<-- POST /wd/hub/session/a732d0d3-7326-45a0-9565-774739b18162/element [39m[31m500[39m[90m 10949.604 ms - 195[39m [90m[39m
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"value":"No element found","status":7}

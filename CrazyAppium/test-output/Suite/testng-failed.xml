@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="1" name="Failed suite [Suite]" parallel="tests">
+  <parameter name="port" value="4490"/>
+  <parameter name="udid" value="4f71329f"/>
+  <listeners>
+    <listener class-name="org.uncommons.reportng.HTMLReporter"/>
+    <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
+  </listeners>
+  <test name="4f71329f">
+    <parameter name="port" value="4490"/>
+    <parameter name="udid" value="4f71329f"/>
+    <classes>
+      <class name="cn.crazy.appium.testcases.ZhihuTest0716"/>
+    </classes>
+  </test> <!-- 4f71329f -->
+  <test name="4f71329f(failed)" parallel="tests">
+    <parameter name="port" value="4490"/>
+    <parameter name="udid" value="4f71329f"/>
+    <classes>
+      <class name="cn.crazy.appium.testcases.ZhihuTest0716">
+        <methods>
+          <include name="login"/>
+          <include name="article"/>
+          <include name="addAnswer"/>
+          <include name="afterMethod"/>
+          <include name="reg"/>
+          <include name="beforeClass"/>
+          <include name="afterClass"/>
+        </methods>
+      </class> <!-- cn.crazy.appium.testcases.ZhihuTest0716 -->
+    </classes>
+  </test> <!-- 4f71329f(failed) -->
+</suite> <!-- Failed suite [Suite] -->

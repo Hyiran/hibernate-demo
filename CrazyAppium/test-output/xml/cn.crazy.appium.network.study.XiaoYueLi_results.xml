@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="192.168.56.101:5555"
+           tests="1"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="21.068">
+  <properties />
+  
+  
+            <testcase name="changeLanguage" time="21.068" classname="cn.crazy.appium.network.study.XiaoYueLi" />
+      
+</testsuite>

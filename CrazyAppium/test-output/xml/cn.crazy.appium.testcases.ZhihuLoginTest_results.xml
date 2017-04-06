@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="192.168.56.102:5555"
+           tests="3"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="48.137">
+  <properties />
+  
+  
+            <testcase name="login" time="11.309" classname="cn.crazy.appium.testcases.ZhihuLoginTest" />
+                <testcase name="putQuestions" time="22.678" classname="cn.crazy.appium.testcases.ZhihuLoginTest" />
+                <testcase name="attentionArticle" time="14.150" classname="cn.crazy.appium.testcases.ZhihuLoginTest" />
+      
+</testsuite>
